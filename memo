@@ -1,9 +1,51 @@
-  vsCode 단축키 
+vsCode 단축키 
 
-  들여쓰기 ctrl + k + f 
+들여쓰기 ctrl + k + f 
 --------------------------
 
-  
-  순서없는 리스트 만드려면 ul , li 태그를 사용한다.
-  순서있는 리스트 만드려면 ol , li 태그를 사용한다.
-  
+<html>
+
+1. 순서없는 리스트 만드려면 ul , li 태그를 사용한다.
+2. 순서있는 리스트 만드려면 ol , li 태그를 사용한다.
+3. 목록리스트 만들기 dl dd dt 태그를 사용한다.
+  dl태그로 전체태그 만들고
+  dt로 제목 태그만든다
+  dd로 dt에 대한 내용 작성한다.
+  ex)dlex.html
+
+4. 테이블 만들때는 table태그만들고 tr태그만들고 th로 내용을 작성한다.
+    caption태그로 테이블 명을 작성한다.
+        <table>
+        <tr> table row (열)
+            <th> table head (열에 대한 내용)</th>
+        </tr>
+        
+    </table>
+    ex)index.html
+
+5. 테이블태그에서 rowspan=""은 세로로 합칠 칸의 갯수이다. row = 가로
+   테이블태그에서 colspan=""은 가로로 합칠 칸의 갯수이다. cok = 세로
+   위의 속성을 입력하고 합치는 다른열은 주석처리해야한다.
+   span은 합친다 라는 속성이다.
+
+6. 테이블에서 colgroup 
+        <colgroup>
+            <col>
+            <col span="2" style="background-color: blue;">
+            <col style="background-color: yellow;">
+        </colgroup>
+        총 테이블 컬럼수는 4개이다 하지만 colgroup에서는 span=2 때문에 1개로 합쳐진다.
+<css>
+
+1. 테이블태그에서 css 작업하기
+굵기10px 선의 색깔 red
+ <thead style="border: 10px solid red;">
+ 채워지는 칸의 색깔 aqua
+      <tr style="background-color: aqua;">
+        <th>구분</th>
+        <th>학교수</th>
+        <th>학급수</th>
+        <th>학생수</th>
+        <th>교원수</th>
+      </tr>
+    </thead>

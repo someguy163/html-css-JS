@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+            /* 테이블의 선 두께,색상 */
+            /* border-collapse: collapse; */
+        }
+
+        td,
+        th {
+            padding: 10px 20px;
+            /* 테이블 칸의 크기 */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>수습 국원 지원 양식</h1>
+    <table>
+        <colgroup>
+            <col style="background-color: greenyellow;">
+            <col>
+            <col style="width: 200px;">
+        </colgroup>
+        <!-- <thead> -->
+        <tr>
+            <th rowspan="3">개인정보</th>
+            <th>이름</th>
+            <th></th>
+        </tr>
+        <!-- </thead> -->
+        <!-- <tbody> -->
+        <tr>
+            <!-- <th>개인정보</th> -->
+            <th>학과/학번</th>
+            <th></th>
+        </tr>
+        <tr>
+            <!-- <th>개인정보</th> -->
+            <th>연락처</th>
+            <th></th>
+        </tr>
+        <!-- </tbody> -->
+        <!-- <tfoot> -->
+        <tr>
+            <th>지원분야</th>
+            <th colspan="2"></th>
+            <!-- <th></th> -->
+        </tr>
+        <!-- </tfoot> -->
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+        border:5px solid #ccc;
+        /* 테이블의 선 두께,색상 */
+        border-collapse: collapse;
+        } 
+        td, th {
+        padding:10px 20px; 
+        /* 테이블 칸의 크기 */
+        }
+        </style>
+</head>
+<body>
+    <table>
+        <caption> <strong>행, 열 병합 예제</strong></caption>
+        <thead style="background-color: bisque;">
+        <tr>
+            <th>1열</th>
+            <th>2열</th>
+            <th>3열</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2"> 1행 1열</td>
+            <td>1행 2열</td>
+            <td>1행 3열</td>
+        </tr>
+        <tr>
+            <!-- <td>1행 1열</td> -->
+            <td>2행 2열</td>
+            <td>2행 3열</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" style="background-color: bisque;">3행 1열</td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+        </tr>
+    </tfoot>
+    </table>
+</body>
+</html>

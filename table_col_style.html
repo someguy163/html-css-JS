@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+        border:5px solid #ccc;
+        /* 테이블의 선 두께,색상 */
+        border-collapse: collapse;
+        } 
+        td, th {
+        padding:10px 20px; 
+        /* 테이블 칸의 크기 */
+        }
+        </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col style="width: 100px;">
+            <col style="width: 300px;">
+            <col style="width: 100px;">
+            <col style="width: 300px;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th></th>
+                <th>연락처</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>주소</th>
+                <td colspan="3"></td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>자기소개</th>
+                <td colspan="3"></td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

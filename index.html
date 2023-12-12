@@ -5,6 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>상품 소개 페이지</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 2px solid #ccc;
+      /* 테이블의 선 두께,색상 */
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      padding: 10px 20px;
+      /* 테이블 칸의 크기 */
+    }
+  </style>
 </head>
 
 <body>
@@ -79,8 +94,70 @@
   <h4>샐러드 완성</h4>
   <h4></h4>
 
-  <h2>상품 구성</h2>
+  <br>
+  <hr>
+  <!-- <h2>상품 구성</h2>
+  <dl>
+    <dt>선물용 3kg</dt>
+    <dd>소과 13~16과</dd>
+    <dd>중과 10~12과</dd>
+  </dl>
+  <dl>
+    <dt>선물용 5kg</dt>
+    <dd>중과 15~19과</dd>
+  </dl> -->
 
+  <h2>상품구성항목</h2>
+
+  <table>
+    <caption>
+      <strong>선물용과 가정용 상품 구성</strong>
+      <p>sdf</p>
+    </caption>
+    <colgroup>
+      <col style="width: 100px; background-color: aqua;">
+      <col>
+      <col span="2" style="width: 150px;">
+      <!-- <col style="width: 150px;"> -->
+    </colgroup>
+    <thead style="background-color: yellow;">
+      <tr>
+        <th>용도</th>
+        <th>중량</th>
+        <th>개수</th>
+        <th>가격</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">선물용</td>
+        <td>3kg</td>
+        <td>11~16과</td>
+        <td>35000원</td>
+      </tr>
+      <tr>
+        <!-- <td>선물용</td> -->
+        <td>5kg</td>
+        <td>11~16과</td>
+        <td>52000원</td>
+      </tr>
+      <tr>
+        <td rowspan="2">가정용</td>
+        <td>3kg</td>
+        <td>11~16과</td>
+        <td>30000원</td>
+      </tr>
+      <tr>
+        <!-- <td>가정용</td> -->
+        <td>5kg</td>
+        <td>18~26과</td>
+        <td>47000원</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <br>
+  <br>
 
 </body>
 
