@@ -113,7 +113,22 @@ vsCode 단축키
 4. 줄간격 : line-height:2.0 다음과 같이 지정한다.
 
 
-5. 
+5.     테이블만들어서 줄 설정 하려면 table태그와 th,td태그 모두 스타일시트에 적용해야한다.
+
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding:10px 20px; 
+        }
+        th{
+            background-color: #eee;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        td{
+            padding: 10px;
+            border: 1px solid black;
+        }
 
 
 6. 
