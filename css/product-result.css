@@ -1,0 +1,32 @@
+#container{
+    width: 600px;
+}
+.content1{
+    border: 1px solid gray;
+    border-radius: 25px 25px 0px 0px;
+}
+.content2{
+    border: 1px solid gray;
+    margin-top: 30px
+}
+.content3{
+    border: 1px solid gray;
+    border-radius: 0px 0px 25px 25px;
+    margin-top: 30px;
+    padding: 20px;
+    
+}
+.info1 ,.info2{
+    padding: 20px;
+}
+/* 테이블 css */
+td,
+th {
+  padding: 10px 20px;
+  /* 테이블 칸의 크기 */
+}
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+/* 테이블 css */

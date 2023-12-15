@@ -1,0 +1,45 @@
+body {
+    background-color: blueviolet;
+    margin: 50px 33%;
+}
+
+li {
+    padding: 10px;
+}
+
+#container {
+    border: 2px solid black;
+    width: 600px;
+    background-color: white;
+}
+
+button {
+    background-color: green;
+    color: white;
+    width: 90%;
+    height: 35px;
+    border: 2px solid black;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+
+#head {
+    text-align: center;
+}
+
+input {
+    width: 87.5%;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+p {
+    text-align: center;
+}
