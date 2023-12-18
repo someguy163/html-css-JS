@@ -131,13 +131,16 @@ vsCode 단축키
         }
 
 
-6. 
+6.     세로정렬 가로정렬 : 세로정렬은 "display : block;" 으로 하면된다
+       가로정렬 : display: "inline-block;" 으로 하면된다
 
 
-7. 
-
+7.     배경화면 x방향으로 지정하고싶으면 "background-repeat: repeat-x;"
+       배경화면 y방향으로 지정하고싶으면 "background-repeat: repeat-y;"
+    
 
 8. 
+
 
 
 9. 

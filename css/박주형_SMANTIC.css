@@ -1,0 +1,47 @@
+body {
+    width: 960px;
+}
+
+header {
+    margin-left: 20px;
+}
+
+header a {
+    padding: 10px;
+}
+
+section {
+    margin: 0 auto;
+}
+
+#article1 {
+    margin: 1% 2.5%;
+    float: left;
+    width: 45%;
+
+}
+
+#article2 {
+    float: left;
+    width: 25%;
+    height: 200px;
+    text-align: center;
+    
+    margin: 50px 2.5%;
+    font-size: large;
+}
+
+#article3 {
+    float: left;
+    width: 15%;
+    margin: 50px 2.5%;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+}
+
+footer a {
+    padding: 15px;
+}
