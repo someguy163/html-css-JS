@@ -139,8 +139,10 @@ vsCode 단축키
        배경화면 y방향으로 지정하고싶으면 "background-repeat: repeat-y;"
     
 
-8. 
+8.     부모 - 자식 css 적용 방법 : "div h1 { }" 처럼 적용 - div안에 있는 h1태그 전부 적용
+       형제 - 형제 css 적용 방법 : "h1 + p " 처럼 적용 - 들여쓰기시 h1과 같은 라인에 있는 인접합 p태그 적용
 
 
 
-9. 
+9.     속성태그를 통해서 css 적용 방법 : "a[target="_blank"]" 처럼 적용하면 target="blank" 인것들 전부 적용가능하다.
+       특정 속성만 제외하고 css 적용 방법 : "#signup input:not([type=radio])" 
