@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        #container {
+            text-align: center;
+            background-color: white;
+            width: 600px;
+            height: 800px;
+            margin: 60px auto;
+        }
+
+        header {
+            width: 100%;
+            height: 200px;
+            line-height: 100px;
+        }
+
+        section {
+            width: 100%;
+            height: 200px;
+            margin-top: 70px;
+        }
+
+        section div p {
+            text-align: left;
+            margin-left: 100px;
+        }
+
+        section div input {
+            border-style: none;
+            background-color: #ccc;
+            width: 400px;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+        section div button {
+            background-color: deeppink;
+            width: 300px;
+            height: 30px;
+            border-style: none;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        footer{
+            height: 200px;
+        }
+        footer div{
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <br>
+            <h2>로그인</h2>
+            <hr width="400px">
+        </header>
+        <form action="mainpage.html">
+        <section>
+            <div>
+                <p>ID</p>
+            </div>
+            <div>
+                <input type="text" placeholder=" 아이디를 입력하세요" required>
+            </div>
+            <div>
+                <p>Password</p>
+            </div>
+            <div>
+                <input type="password" placeholder=" 비밀번호를 입력하세요" required>
+            </div>
+            <div>
+                <button type="submit">로그인</button>
+                <br>
+                <hr width="400px">
+            </div>
+        </section>
+    </form>
+        <footer>
+            <div>
+                <a href="#">아이디찾기<spa style="color: red;"> | </span></a>
+                <a href="#">비밀번호찾기<span style="color: red;"> | </span></a>
+                <a href="maincreate.html">회원가입<span style="color: red;"> | </span></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
