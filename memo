@@ -148,4 +148,4 @@ vsCode 단축키
        특정 속성만 제외하고 css 적용 방법 : "#signup input:not([type=radio])" 
 
 
-10 .   다른 이미지 크기 동일하게 적용하는 법 
+10 .   items:nth-child(odd) 홀수만 적용한다
