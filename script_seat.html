@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>자리배치도</h1>
+    <script>
+        var memNum;
+        var colNum;
+        var rowNum;
+
+        memNum = prompt("입장객은 몇명인가요?");
+        colNum = prompt("한줄에 앉을 사람수는 몇명인가요?");
+
+        if (memNum % colNum === 0) {
+            rowNum = parseInt(memNum / colNum);
+        }
+        else {
+            rowNum = parseInt(memNum / colNum) + 1;
+        }
+
+        document.write("모두 " + rowNum + "개의 줄이 필요합니다");
+
+    </script>
+</body>
+
+</html>
