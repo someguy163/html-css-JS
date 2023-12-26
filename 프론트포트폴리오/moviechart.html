@@ -5,26 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/front.css">
     <style>
+        body {
+            background-color: rgba(50, 48, 52, 0.939);
+        }
+
         #container {
             width: 1400px;
-            border: 1px solid black;
-            height: 2000px;
+            height: 1850px;
             margin: 0px auto;
+            /* background-color: rgba(50, 48, 52, 0.939); */
         }
 
         /* 헤더 시작 */
 
         header {
             width: 100%;
-            height: 80px;
-            margin-top: 30px;
+            height: 100px;
+            /* margin-top: 30px; */
             background-color: rgba(50, 48, 52, 0.939);
             color: white;
             display: flex;
             flex-direction: row;
             align-content: center;
-            line-height: 80px;
+            line-height: 100px;
             border-radius: 15px 15px 0px 0px;
         }
 
@@ -41,7 +46,7 @@
         }
 
         .headerimg {
-            margin-top: 20px;
+            margin-top: 30px;
             padding: 5px;
         }
 
@@ -50,7 +55,8 @@
         article {
             width: 100%;
             height: 210px;
-            border: 1px solid black;
+            /* border: 1px solid black; */
+            /* background-color: rgba(50, 48, 52, 0.939); */
         }
 
         /* 배너 (article) 끝 */
@@ -58,12 +64,130 @@
         section {
             width: 100%;
             height: 1200px;
-            border: 1px solid black;
+            /* border: 1px solid black; */
+            /* background-color: rgba(50, 48, 52, 0.939); */
+
         }
+
+        /* section div p {
+            display: inline-block;
+        } */
+
+        section div #sectiontitle {
+            margin-right: 40px;
+            /* margin-left: 46%; */
+            margin-top: 60px;
+            color: white;
+        }
+
+        section div {
+            display: flex;
+            flex-direction: row;
+            margin-left: 25px;
+            flex-flow: row wrap;
+        }
+
+        section #titlemenu {
+            width: 100px;
+            height: 50px;
+            float: left;
+
+        }
+
+        section div div {
+            display: inline-block;
+
+            /* padding: 5px; */
+        }
+
+        section div img {
+            width: 220px;
+            height: 350px;
+            margin-top: 80px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        /* 평점 , 예매 버튼*/
+        #ticketing {
+            width: 150px;
+            padding: 5px;
+            border-radius: 10px;
+            border-style: none;
+            background-color: darkgreen;
+            color: white;
+        }
+
+        #ticketing:hover {
+            background-color: rgb(46, 68, 9);
+        }
+
+        #score {
+            width: 80px;
+            padding: 5px;
+            border-radius: 10px;
+            border-style: none;
+        }
+
+        #score:hover {
+            background-color: darkolivegreen;
+        }
+
+        /* 푸터시작 */
+        footer {
+            background-color: rgba(50, 48, 52, 0.939);
+            width: 100%;
+            height: 200px;
+        }
+
+        footer div {
+            padding: 5px;
+        }
+
+        footer #footertop {
+            margin-left: 30px;
+            font-size: x-small;
+        }
+
+        footer #footertop div {
+            display: inline-block;
+            margin-left: 15px;
+            margin-top: 30px;
+            text-decoration: none;
+        }
+
+        footer #footertop div a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer #footerbottom {
+            margin-left: 30px;
+        }
+
+        footer #footerbottom div {
+            display: inline-block;
+            color: white;
+            margin-left: 40px;
+            margin-top: 30px;
+            font-size: x-small;
+        }
+
+        footer #footerbottom div img {
+            margin-left: 10px;
+        }
+
+        #footerinfo {
+            margin-left: 100px;
+        }
+
+        /* 푸터 끝 */
     </style>
 </head>
 
 <body>
+
     <div id="container">
         <header>
             <div>
@@ -75,19 +199,19 @@
                 <div class="headpart">
                     <a href="moviechart.html">영화</a>
                     <a href="#">예매</a>
-                    <a href="#">극장</a>
+                    <a href="#">스토어</a>
                 </div>
             </div>
             <div>
                 <div>
-                    <a href="main.html"><img src="img/megabox_logo.png" alt="" style="width: 140px; height: 47px;"
+                    <a href="index.html"><img src="img/megabox_logo.png" alt="" style="width: 160px; height: 50px;"
                             class="headerimg"></a>
                 </div>
             </div>
             <div>
                 <div class="headpart">
                     <a href="#">이벤트</a>
-                    <a href="#">스토어</a>
+                    <a href="#">극장</a>
                     <a href="notice_board.html">게시판</a>
                 </div>
             </div>
@@ -102,6 +226,107 @@
             <img src="img/banner.png" alt="" style="width: 980px; height: 80px; margin-left: 210px; margin-top: 20px;">
             <img src="img/banner2.jpg" alt="" style="width: 980px; height: 80px; margin-left: 210px;">
         </article>
+        <section>
+            <p>
+            <div class="titlemenu">
+                <a href="#">
+                    <h2 id="sectiontitle">영화 순위</h2>
+                </a>
+            </div>
+            </p>
+            <p>
+            <div class="titlemenu">
+                <a href="#">
+                    <h2 id="sectiontitle">개봉예정작</h2>
+                </a>
+            </div>
+            </p>
+            <div>
+                <div>
+                    <img src="img/movie_chart1.jpg" alt="">
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <img src="img/movie_chart2.jpg" alt="">
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <img src="img/movie_chart3.jpg" alt="">
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <img src="img/movie_chart4.jpg" alt="">
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <img src="img/movie_chart5.jpg" alt="">
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <img src="img/movie_chart4.jpg" alt="">
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <img src="img/movie_chart5.jpg" alt="">
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <img src="img/movie_chart6.jpg" alt="">
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <img src="img/movie_chart7.jpg" alt="">
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <img src="img/movie_chart7.jpg" alt="">
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div id="footertop">
+                <div><a href="#">이용약관</a></div>
+                <div><a href="#">회사소개</a></div>
+                <div><a href="#">인재채용</a></div>
+                <div><a href="#">사회공헌</a></div>
+                <div><a href="#">제휴/광고/부대사업문의</a></div>
+                <div><a href="#">위치기반서비스 이용약관</a></div>
+                <div><a href="#">개인정보처리방침</a></div>
+                <div><a href="#">윤리경영</a></div>
+            </div>
+            <div id="footerbottom">
+                <div><img src="img/megabox_logo.png" alt="" style="width:160px;"></div>
+                <div style="width: 700px; " id="footerinfo">서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 메가박스 스퀘어) ARS 1544-0070 대표이메일
+                    m.dreamcenter@partner.megabox.co.kr
+                    대표자명 홍정인 · 개인정보보호책임자 강병철 · 사업자등록번호 211-86-59478 · 통신판매업신고번호 2023-서울성동-0177
+                    COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</div>
+                <div><a href="#"><img src="img/ico-kakao.png" alt=""></a>
+                    <a href="#"></a><img src="img/ico-naver.png" alt=""></a>
+                    <a href="#"><img src="img/ico-payco.png" alt="">
+                </div></a>
+            </div>
+        </footer>
     </div>
 </body>
 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>
+        while 문을 입력한 팩토리얼 계산
+    </h1>
+    <script>
+        var n = prompt("숫자를 입력하세요");
+        var msg = "";
+
+        if (n !== null) {
+            var nfact = 1;
+            var count = 1;
+            while (count <= n) {
+                nfact *= count;
+                count++;
+            }
+            msg = n + "! = " + nfact;
+        }
+        else {
+            msg = "결과값을 입력하세요";
+        }
+        document.write(msg);
+    </script>
+</body>
+
+</html>

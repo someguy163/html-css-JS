@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            margin: 20px;
+            float: left;
+        }
+
+        table,
+        th {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+        th,
+        td {
+            padding: 8px 13px;
+        }
+
+        th {
+            background: #eee;
+        }
+
+        td {
+            border: 1px dotted black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>구구단</h1>
+    <script>
+        var x, y;
+        for (x = 1; x <= 9; x++) {
+            document.write("<table>");
+            document.write("<tr><th>" + x + " 단</th></tr>");
+            for (y = 1; y <= 9; y++) {
+                document.write("<tr><td>" + x + "x" + y + "=" + x * y + "</tr></td><br>");
+            }
+            document.write("</table>");
+        }
+    </script>
+</body>
+
+</html>

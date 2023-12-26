@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let birth = parseInt(prompt("태어난 연도를 입력하세요"));
+        let cal = birth % 12;
+        let birth_name
+        switch (cal) {
+            case 0: birth_name = "원숭이띠";
+                break;
+            case 1: birth_name = "닭띠";
+                break;
+            case 2: birth_name = "개띠";
+                break;
+            case 3: birth_name = "돼지띠";
+                break;
+            case 4: birth_name = "쥐띠";
+                break;
+            case 5: birth_name = "소띠";
+                break;
+            case 6: birth_name = "호랑이띠";
+                break;
+            case 7: birth_name = "토끼띠";
+                break;
+            case 8: birth_name = "용띠";
+                break;
+            case 9: birth_name = "뱀띠";
+                break;
+            case 10: birth_name = "말띠";
+                break;
+            default: birth_name = "양띠";
+                break;
+        }
+        alert(birth + "년에 태어났다면 " + birth_name + " 입니다");
+    </script>
+</body>
+
+</html>
