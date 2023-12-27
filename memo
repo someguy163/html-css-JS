@@ -175,3 +175,23 @@ vsCode 단축키
         // }
         userNumber가 null 이 아니면 조건연산자 실행한다.
         userNumber %3 ==0이 참이면 x:y x 출력 아니면 y출력
+
+4.      // continue 는 아래 구문 전부 무시하고 다시 위로 올라간다.
+
+5.      while 문에서 while(true)는 무한 반복이다.
+
+6.              addNumber();
+        function addNumber() {
+            var num1 = parseInt(prompt("첫번쨰 숫자 입력하세요"));
+            var num2 = parseInt(prompt("두번째 숫자 입력하세요"));
+            var sum = (num1 + num2);
+            alert("결과값" + sum);
+            multi =10 *20;
+        }
+
+        다음과 같이 함수를 작성하고 선언하면된다.
+        자료형을 작성한 경우는 지역변수로 사용가능하고
+        자료형을 작성하지 않은 경우는 전역변수로 사용 가능하다.
+
+7.      let지역변수 이다
+        "{}" 안에서 변수 사용할경우에는 let을 사용하자

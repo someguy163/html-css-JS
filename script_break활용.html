@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i =0;
+        var sum =0;
+        var limit = parseInt(prompt("한계값을 입력하세요"));
+
+        while(true){
+            sum = sum +i;
+            if(sum >limit){
+                break;
+            }
+            i++;
+        }
+        document.write(i + "까지 더하면 " + limit +"을 넘는다");
+    </script>
+</body>
+</html>

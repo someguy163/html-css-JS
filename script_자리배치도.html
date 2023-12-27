@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>자리배치도</h1>
+    <script>
+        var memNum;
+        var colNum;
+        var rowNum;
+        var x;
+        var y;
+        var seatnum;
+
+        memNum = prompt("입장객은 몇명인가요?");
+        colNum = prompt("한줄에 앉을 사람수는 몇명인가요?");
+
+
+
+
+        if (memNum % colNum === 0) {
+            rowNum = parseInt(memNum / colNum);
+        }
+        else {
+            rowNum = parseInt(memNum / colNum) + 1;
+        }
+
+
+        // document.write("<table>");
+        // for (x = 0; x <= rowNum; x++) {
+        //     document.write("<tr>");
+        //     for (y = 1; y <= colNum; y++) {
+        //         seatnum = x * colNum + y;
+        //         // 좌석번호
+        //         if (seatnum > memNum) {
+        //             break;
+        //         }
+        //         document.write("<td> 좌석" + seatnum+"</td>");
+        //     }
+        //     document.write("</tr>");
+        // }
+        // document.write("</table>")
+
+
+
+        document.write("<table>");
+        for (x = 0; x <= rowNum; x++) {
+            document.write("<tr>");
+            for (y = 1; y <= colNum; y++) {
+                seatnum = x * colNum + y;
+                if (seatnum > memNum) {
+                    break;
+                }
+                document.write("<td> 좌석" + seatnum + "</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+
+
+
+    </script>
+</body>
+
+</html>
