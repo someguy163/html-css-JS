@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #gugudan {
+            border: 1px solid black;
+            width: 150px;
+            height: 300px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function gugudan() {
+            var n = parseInt(prompt("구구단 몇단을 원하시나요"));
+            let i;
+            if (n < 1 || n > 9 || isNaN(n)) {
+                // n값에 대한 isNaN이 입력되면...
+                alert("잘못입력되었습니다");
+                // return 함수의 처음으로 보내라.
+                return;
+            }
+            else
+                document.write("<div id=gugudan><h2>" + n + "단</h2>");
+            for (i = 1; i <= 9; i++) {
+                var result = n * i
+                document.write(n + "x" + i + "=" + result + "<br>");
+            }
+            document.write("</div>");
+        }
+        gugudan();
+    </script>
+</body>
+
+</html>
