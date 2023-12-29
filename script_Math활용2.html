@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>당첨자 발표</h1>
+    <p>
+        전체 응모자수 :
+        <span id="sumNumber"></span>
+    </p>
+    <p>
+        당첨자 :
+        <span id="result"></span>
+    </p>
+    <script>
+
+        var sumNumber = prompt("전체 응모자수");
+        var person = prompt("당첨자 수");
+        document.write("당첨자는")
+        // 중복제거전
+        // for (i = 0; i < person; i++) {
+        //     var randomNumber = Math.floor(Math.random() * sumNumber + 1);
+        //     document.write(randomNumber+" , ");
+        // }
+
+        // 중복제거
+        var randomArray = [];
+        for (i = 0; i < person; i++) {
+            var randomNumber = Math.floor(Math.random() * sumNumber + 1);
+            // 랜덤변수 발생시킨다
+            if (randomArray.indexOf(randomNumber) === -1) {
+                // 중복제거 메소드
+                randomArray[i] = randomNumber;
+                // randomArray.push(randomNumber);
+                // 중복이 제거된 변수를 randomArray에 저장시킨다
+                document.write(randomNumber + " , ");
+            }
+            else{
+                i--;
+                // 만약 중복된 값이 나올경우 else 문을 통해서 반복문의 i 를 감소 시켜 다시 실행시킨다.
+            }
+
+        }
+        console.log(randomArray);
+        document.querySelector('#result').innerText = randomArray;
+        document.querySelector('#sumNumber').innerText = randomNumber;
+
+    </script>
+</body>
+
+</html>
