@@ -7,195 +7,32 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/haeder&footer.css">
+        <link rel="stylesheet" href="css/movieChart.css">
     <style>
-        body {
-            background-color: rgba(50, 48, 52, 0.939);
-        }
-
-        #container {
-            width: 1400px;
-            height: 1850px;
-            margin: 0px auto;
-            /* background-color: rgba(50, 48, 52, 0.939); */
-        }
-
-        /* 헤더 시작 */
-
-        header {
-            width: 100%;
-            height: 100px;
-            /* margin-top: 30px; */
-            background-color: rgba(50, 48, 52, 0.939);
-            color: white;
-            display: flex;
-            flex-direction: row;
-            align-content: center;
-            line-height: 100px;
-        }
-
-        header div {
-            margin: 0px auto;
-
-        }
-
-        header div a {
-            text-decoration: none;
-            font-weight: bolder;
-            padding: 15px;
-            color: white;
-        }
-
-        .headerimg {
-            /* margin-top: 0px; */
-            padding: 5px;
-        }
-
-        /* 헤더 끝 */
-        /* 배너 (article) */
-        article {
-            width: 100%;
-            height: 210px;
-            /* border: 1px solid black; */
-            /* background-color: rgba(50, 48, 52, 0.939); */
-        }
-
-        /* 배너 (article) 끝 */
-
-        section {
-            width: 100%;
-            height: 1200px;
-            /* border: 1px solid black; */
-            /* background-color: rgba(50, 48, 52, 0.939); */
-        }
-
-
-        #sectiontitle {
-            margin-right: 40px;
-            margin-left: 46%;
-            margin-top: 60px;
-            color: white;
-        }
-
-        section div {
-            display: flex;
-            flex-direction: row;
-            margin-left: 25px;
-            flex-flow: row wrap;
-        }
-
-        .movie_info {
-            position: absolute;
-            margin-left: 20px;
-            padding: 50px;
-            color: white;
-            display: none;
-            width: 220px;
-            height: 350px;
-            /* background-color: gray; */
-            font-size: small;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-            /* background-color: blur(10px); */
-            /* background-color: rgba( 255, 255, 255, 0.5 ); */
-        }
-
-        section div div {
-            display: inline-block;
-            position: relative;
-            /* padding: 5px; */
-        }
-
-        section div img {
-
-            width: 220px;
-            height: 350px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            margin-left: 20px;
-
-        }
-
-
-        /* 평점 , 예매 버튼*/
-        #ticketing {
-            width: 150px;
-            padding: 5px;
-            border-radius: 10px;
-            border-style: none;
-            background-color: darkgreen;
-            color: white;
-        }
-
-        #ticketing:hover {
-            background-color: rgb(46, 68, 9);
-        }
-
-        #score {
-            width: 80px;
-            padding: 5px;
-            border-radius: 10px;
-            border-style: none;
-            margin-left: 10px;
-        }
-
-        #score:hover {
-            background-color: darkolivegreen;
-        }
-
-        /* 푸터시작 */
-        footer {
-            background-color: rgba(50, 48, 52, 0.939);
-            width: 100%;
-            height: 200px;
-        }
-
-        footer div {
-            padding: 5px;
-        }
-
-        footer #footertop {
-            margin-left: 30px;
-            font-size: x-small;
-        }
-
-        footer #footertop div {
-            display: inline-block;
-            margin-left: 15px;
-            margin-top: 30px;
-            text-decoration: none;
-        }
-
-        footer #footertop div a {
-            text-decoration: none;
-            color: white;
-        }
-
-        footer #footerbottom {
-            margin-left: 30px;
-        }
-
-        footer #footerbottom div {
-            display: inline-block;
-            color: white;
-            margin-left: 40px;
-            margin-top: 30px;
-            font-size: x-small;
-        }
-
-        footer #footerbottom div img {
-            margin-left: 10px;
-        }
-
-        #footerinfo {
-            margin-left: 100px;
-        }
-
-        /* 푸터 끝 */
     </style>
 </head>
 
 <body>
+    <script>
+        function showMovie() {
+            var show = document.querySelector('.showMovie');
+            show.style.display = 'block';
+            // console.log("showMovie show" + show);
+            var hide = document.querySelector('.expectedMovie');
+            hide.style.display = 'none';
+            // console.log("showMovie hide" + hide);
+        }
+        function expectedMovie() {
+            var hide = document.querySelector('.expectedMovie');
+            hide.style.display = 'block';
+            // console.log("expectedMovie hide" + hide);
+            var show = document.querySelector('.showMovie');
+            show.style.display = 'none';
+            // console.log("expectedMovie show" + show);
+
+        }
+    </script>
     <script>
         // 이미지에 마우스 올려놓을시 영화 설명
         function movie_info(n) {
@@ -280,19 +117,23 @@
         </article>
         <section>
             <p>
-            <h2 id="sectiontitle">영화 순위</h2>
+            <h2 id="sectiontitle" class="movieNum" ><a href="#" onmouseover="showMovie()">영화 순위</a> 
+                <span style="margin-left: 50px;" id="expected" ><a href="" onmouseover="expectedMovie()">예정작</a></span></h2>
             </p>
-            <div>
+
+            <div class="showMovie">
                 <div>
-                    <p class="movie_info" style="text-overflow: ellipsis;">이순신(김윤석)은 왜군의 수장이던 도요토미 히데요시가 갑작스럽게 사망한 뒤 왜군들이 조선에서 황급히 퇴각하려 한다는 것을 알게 된다.
+                    <p class="movie_info" style="text-overflow: ellipsis;">이순신(김윤석)은 왜군의 수장이던 도요토미 히데요시가 갑작스럽게 사망한 뒤
+                        왜군들이 조선에서 황급히 퇴각하려 한다는 것을 알게 된다.
                         “절대 이렇게 전쟁을 끝내서는 안 된다”
                         왜군을 완벽하게 섬멸하는 것이 이 전쟁을 올바르게 끝나는 것이라 생각한 이순신은
                         명나라와 조명연합함대를 꾸려 왜군의 퇴각로를 막고 적들을 섬멸하기로 결심한다.
                         하지만 왜군의 뇌물 공세에 넘어간 명나라 도독 진린(정재영)은 왜군에게 퇴로를 열어주려 하고,
                         설상가상으로 왜군 수장인 시마즈(백윤식)의 살마군까지 왜군의 퇴각을 돕기 위해 노량으로 향하는데…
                         2023년 12월, 모두를 압도할 최후의 전투가 시작된다!</p>
-                    <img src="img/movie_chart1.jpg" alt="" onmouseover="movie_info(0)" onmouseout="movie_info_close(0)">
-
+                    <img src="img/movie_chart1.jpg" alt="" onmouseover="movie_info(0)" onmouseout="movie_info_close(0)"
+                        >
+                    
                     <br>
                     <button id="score" value="score">평점</button>
                     <button id="ticketing" value="ticketing">예매</button>
@@ -307,8 +148,9 @@
                         진압군 사이, 일촉즉발의 9시간이 흘러가는데…
                         목숨을 건 두 세력의 팽팽한 대립
                         오늘 밤, 대한민국 수도에서 가장 치열한 전쟁이 펼쳐진다!</p>
-                    <img src="img/movie_chart2.jpg" alt="" onmouseover="movie_info(1)" onmouseout="movie_info_close(1)">
-
+                    <img src="img/movie_chart2.jpg" alt="" onmouseover="movie_info(1)" onmouseout="movie_info_close(1)"
+                        >
+                    
                     <br>
                     <button id="score" value="score">평점</button>
                     <button id="ticketing" value="ticketing">예매</button>
@@ -319,8 +161,9 @@
                         그동안 겪지 못 했던 최악의 위협 속 ‘아쿠아맨’은
                         ‘블랙 만타’와 손을 잡았던 이부 동생 ‘옴’ 없이는 절대적 힘이 부족한 상황.
                         바다를 지배할 슈퍼 히어로가 세상의 판도를 바꾼다!</p>
-                    <img src="img/movie_chart3.jpg" alt="" onmouseover="movie_info(2)" onmouseout="movie_info_close(2)">
-
+                    <img src="img/movie_chart3.jpg" alt="" onmouseover="movie_info(2)" onmouseout="movie_info_close(2)"
+                        >
+                    
                     <br>
                     <button id="score" value="score">평점</button>
                     <button id="ticketing" value="ticketing">예매</button>
@@ -333,8 +176,9 @@
                         슈퍼스타 ‘벨벳’과 ‘비니어’에게 잡혀 재능을 빼앗기고 있다는 소식을 듣는다.
                         그를 구하기 위해서는 흩어져 있는 ‘브로존’을 재결합하고 완벽한 화음을 되찾아야 하는데…
                         12월, 가장 짜릿한 컴백 무대의 시작!</p>
-                    <img src="img/movie_chart4.jpg" alt="" onmouseover="movie_info(3)" onmouseout="movie_info_close(3)">
-
+                    <img src="img/movie_chart4.jpg" alt="" onmouseover="movie_info(3)" onmouseout="movie_info_close(3)"
+                        >
+                    
                     <br>
                     <button id="score" value="score">평점</button>
                     <button id="ticketing" value="ticketing">예매</button>
@@ -353,17 +197,15 @@
                         이 세상의 파멸을 바라며 폭주하기 시작하는데,
                         위기에 처한 세상을 구하기 위한 유일한 희망이 바로 짱구...!?
                         올 겨울, 짱구의 엉덩이가 뜨겁게 타오른다!</p>
-                    <img src="img/movie_chart5.jpg" alt="" onmouseover="movie_info(4)" onmouseout="movie_info_close(4)">
-
+                    <img src="img/movie_chart5.jpg" alt="" onmouseover="movie_info(4)" onmouseout="movie_info_close(4)"
+                        >
+                    
                     <br>
                     <button id="score" value="score">평점</button>
                     <button id="ticketing" value="ticketing">예매</button>
                 </div>
             </div>
-            <p>
-            <h2 id="sectiontitle" style="margin-top: 100px;">상영예정작</h2>
-            </p>
-            <div>
+            <div class="showMovie">
                 <div>
                     <p class="movie_info">“우리 동네에는 괴물이 산다”
                         싱글맘 사오리(안도 사쿠라)는 아들 미나토(쿠로카와 소야)의 행동에서 이상 기운을 감지한다.
@@ -375,7 +217,9 @@
                         자신이 아는 아들의 모습과 사람들이 아는 아들의 모습이
                         다르다는 사실을 어렴풋이 깨닫는데…
                         태풍이 몰아치던 어느 날, 아무도 몰랐던 진실이 드러난다.</p>
-                    <img src="img/movie_chart9.jpg" alt="" onmouseover="movie_info(5)" onmouseout="movie_info_close(5)">
+                    <img src="img/movie_chart9.jpg" alt="" onmouseover="movie_info(5)" onmouseout="movie_info_close(5)"
+                        >
+                    
                     <br>
                     <button id="score" value="score">평점</button>
                     <button id="ticketing" value="ticketing">예매</button>
@@ -388,8 +232,9 @@
                         웅장한 라이브 엔터테인먼트가 지금 막을 올린다!
                         음악이 시대와 사람들의 마음을 이어가고,
                         이 무대가 순간을 초월해 사랑받을 수 있기를</p>
-                    <img src="img/movie_chart10.jpg" alt="" onmouseover="movie_info(6)"
-                        onmouseout="movie_info_close(6)">
+                    <img src="img/movie_chart10.jpg" alt="" onmouseover="movie_info(6)" onmouseout="movie_info_close(6)"
+                        >
+                    
                     <br>
                     <button id="score" value="score">평점</button>
                     <button id="ticketing" value="ticketing">예매</button>
@@ -401,7 +246,9 @@
                         - 상영일시 : 2024년 1월 1일(월) 19:00 *생중계
                         - 예매오픈 : 2023년 12월 4일(월) 15:00
                         - 공연시간 : 150분 (인터미션 포함)</p>
-                    <img src="img/movie_chart6.jpg" alt="" onmouseover="movie_info(7)" onmouseout="movie_info_close(7)">
+                    <img src="img/movie_chart6.jpg" alt="" onmouseover="movie_info(7)" onmouseout="movie_info_close(7)"
+                        >
+                    
                     <br>
                     <button id="score" value="score">평점</button>
                     <button id="ticketing" value="ticketing">예매</button>
@@ -417,7 +264,9 @@
                         ‘뽀로로 밴드’의 예상치 못한 인기에 위기감을 느껴 급기야 방해 공작을 벌이게 되고,
                         뽀로로와 친구들은 마지막 공연을 앞두고 갑작스러운 위기를 맞이하는데…
                         12월, 우승보다 노는 게 제일 좋은 뽀로로 밴드의 아주 특별한 모험이 시작된다!</p>
-                    <img src="img/movie_chart7.jpg" alt="" onmouseover="movie_info(8)" onmouseout="movie_info_close(8)">
+                    <img src="img/movie_chart7.jpg" alt="" onmouseover="movie_info(8)" onmouseout="movie_info_close(8)"
+                        >
+                    
                     <br>
                     <button id="score" value="score">평점</button>
                     <button id="ticketing" value="ticketing">예매</button>
@@ -434,6 +283,181 @@
                         현실 세계의 영혼이 게임에 봉인됐다!
                         위기에 빠진 친구들을 구하기 위한 놀라운 게임 어드벤처가 시작된다!</p>
                     <img src="img/movie_chart8.jpg" alt="" onmouseover="movie_info(9)" onmouseout="movie_info_close(9)">
+                    
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+            </div>
+
+            <!-- *************************************************** -->
+            <!-- *************************************************** -->
+            <!-- expectedMovie 예정작 보여주기-->
+            <!-- *************************************************** -->
+            <!-- *************************************************** -->
+            <div class="expectedMovie">
+                <div>
+                    <p class="movie_info" style="text-overflow: ellipsis;">이순신(김윤석)은 왜군의 수장이던 도요토미 히데요시가 갑작스럽게 사망한 뒤
+                        왜군들이 조선에서 황급히 퇴각하려 한다는 것을 알게 된다.
+                        “절대 이렇게 전쟁을 끝내서는 안 된다”
+                        왜군을 완벽하게 섬멸하는 것이 이 전쟁을 올바르게 끝나는 것이라 생각한 이순신은
+                        명나라와 조명연합함대를 꾸려 왜군의 퇴각로를 막고 적들을 섬멸하기로 결심한다.
+                        하지만 왜군의 뇌물 공세에 넘어간 명나라 도독 진린(정재영)은 왜군에게 퇴로를 열어주려 하고,
+                        설상가상으로 왜군 수장인 시마즈(백윤식)의 살마군까지 왜군의 퇴각을 돕기 위해 노량으로 향하는데…
+                        2023년 12월, 모두를 압도할 최후의 전투가 시작된다!</p>
+                    <img src="expectedMovie/exmovie_chart1-1.jpg" alt="" onmouseover="movie_info(10)" onmouseout="movie_info_close(10)"
+                        >
+                    
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <p class="movie_info">1979년 12월 12일, 수도 서울 군사반란 발생
+                        그날, 대한민국의 운명이 바뀌었다
+                        대한민국을 뒤흔든 10월 26일 이후, 서울에 새로운 바람이 불어온 것도 잠시
+                        12월 12일, 보안사령관 전두광이 반란을 일으키고
+                        군 내 사조직을 총동원하여 최전선의 전방부대까지 서울로 불러들인다.
+                        권력에 눈이 먼 전두광의 반란군과 이에 맞선 수도경비사령관 이태신을 비롯한
+                        진압군 사이, 일촉즉발의 9시간이 흘러가는데…
+                        목숨을 건 두 세력의 팽팽한 대립
+                        오늘 밤, 대한민국 수도에서 가장 치열한 전쟁이 펼쳐진다!</p>
+                    <img src="expectedMovie/exmovie_chart2-1.jpg" alt="" onmouseover="movie_info(11)" onmouseout="movie_info_close(11)"
+                        >
+                    
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <p class="movie_info">아틀란티스 왕국을 이끌 왕의 자리에 오른 ‘아쿠아맨’.
+                        그 앞에 ‘블랙 만타’가 세상을 뒤흔들 강력한 지배 아이템 ‘블랙 트라이던트’를 손에 넣게 된다.
+                        그동안 겪지 못 했던 최악의 위협 속 ‘아쿠아맨’은
+                        ‘블랙 만타’와 손을 잡았던 이부 동생 ‘옴’ 없이는 절대적 힘이 부족한 상황.
+                        바다를 지배할 슈퍼 히어로가 세상의 판도를 바꾼다!</p>
+                    <img src="expectedMovie/exmovie_chart3-1.jpg" alt="" onmouseover="movie_info(12)" onmouseout="movie_info_close(12)"
+                        >
+                    
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <p class="movie_info">최애 아이돌 그룹 재결합 초읽기! 우리 함께하면 더 좋잖아!
+                        전 세계 모든 트롤을 열광케 했던 최고의 아이돌 그룹 ‘브로존’.
+                        역대급 무대 실수와 형제 간의 불화로 결국 해체한 뒤, 모두에게 잊혀 간다.
+                        그러던 어느 날, ‘브로존’의 황금막내 ‘브랜치’는 메인보컬 ‘플로이드’가
+                        슈퍼스타 ‘벨벳’과 ‘비니어’에게 잡혀 재능을 빼앗기고 있다는 소식을 듣는다.
+                        그를 구하기 위해서는 흩어져 있는 ‘브로존’을 재결합하고 완벽한 화음을 되찾아야 하는데…
+                        12월, 가장 짜릿한 컴백 무대의 시작!</p>
+                    <img src="expectedMovie/exmovie_chart4-1.jpg" alt="" onmouseover="movie_info(13)" onmouseout="movie_info_close(13)"
+                        >
+                    
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <p class="movie_info">최초의 3D CG! 제작 기간 7년
+                        최고의 웃음과 감동! 최강의 스케일
+                        옷까지 갈아입은 볼록 짱구 등장!
+                        어느 날, 우주에서 날아온 검은 빛과 하얀 빛이 떡잎마을을 향해 떨어진다.
+                        평소처럼 저녁밥을 손꼽아 기다리던 짱구는 하얀 빛에 정통으로 맞게 되고
+                        그러자 온몸에 넘치는 신비한 힘!
+                        힘에 몸을 맡긴 채 엉덩이에 의식을 집중하자 장난감들이 붕붕 떠오른다.
+                        "엉덩이... 엉덩이가 뜨거워...!?
+                        뭔지 몰라도 엄청난 힘을 손에 넣은 것 같아."
+                        한편, 검은 빛을 통해 초능력을 손에 넣은 또 다른 남자는
+                        이 세상의 파멸을 바라며 폭주하기 시작하는데,
+                        위기에 처한 세상을 구하기 위한 유일한 희망이 바로 짱구...!?
+                        올 겨울, 짱구의 엉덩이가 뜨겁게 타오른다!</p>
+                    <img src="expectedMovie/exmovie_chart5-1.jpg" alt="" onmouseover="movie_info(14)" onmouseout="movie_info_close(14)"
+                        >
+                    
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+            </div>
+            <div class="expectedMovie">
+                <div>
+                    <p class="movie_info">“우리 동네에는 괴물이 산다”
+                        싱글맘 사오리(안도 사쿠라)는 아들 미나토(쿠로카와 소야)의 행동에서 이상 기운을 감지한다.
+                        용기를 내 찾아간 학교에서 상담을 진행한 날 이후
+                        선생님과 학생들의 분위기가 심상치 않게 흐르기 시작하고.
+                        “괴물은 누구인가?”
+                        한편 사오리는 친구들로부터 따돌림을 당하고 있는
+                        미나토의 친구 요리(히이라기 히나타)의 존재를 알게 되고
+                        자신이 아는 아들의 모습과 사람들이 아는 아들의 모습이
+                        다르다는 사실을 어렴풋이 깨닫는데…
+                        태풍이 몰아치던 어느 날, 아무도 몰랐던 진실이 드러난다.</p>
+                    <img src="expectedMovie/exmovie_chart6-1.jpg" alt="" onmouseover="movie_info(15)" onmouseout="movie_info_close(15)"
+                        >
+                    
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <p class="movie_info">새로운 시작을 너와, 이 스테이지에서!
+                        '블랙 오어 화이트 라이브 쇼다운' 무대에서 경쟁한 남성 아이돌계 탑러너들의 꿈의 라이브!
+                        IDOLiSH7・TRIGGER・Re:vale・ŹOOĻ
+                        각기 다른 매력을 지닌 4 그룹이 한자리에 모인
+                        웅장한 라이브 엔터테인먼트가 지금 막을 올린다!
+                        음악이 시대와 사람들의 마음을 이어가고,
+                        이 무대가 순간을 초월해 사랑받을 수 있기를</p>
+                    <img src="expectedMovie/exmovie_chart7-1.jpg" alt="" onmouseover="movie_info(16)" onmouseout="movie_info_close(16)"
+                        >
+                    
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <p class="movie_info">스크린으로 만나는 세계 최고의 음악회
+                        2024 빈 필하모닉 신년음악회
+                        [상영정보]
+                        - 상영일시 : 2024년 1월 1일(월) 19:00 *생중계
+                        - 예매오픈 : 2023년 12월 4일(월) 15:00
+                        - 공연시간 : 150분 (인터미션 포함)</p>
+                    <img src="expectedMovie/exmovie_chart8-1.jpg" alt="" onmouseover="movie_info(17)" onmouseout="movie_info_close(17)"
+                        >
+                    
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <p class="movie_info">뽀로로와 친구들은 전 우주를 통틀어 최고의 슈퍼스타를 뽑는 음악 축제
+                        ‘파랑돌 슈퍼스타 선발대회’ 축제에 참가하기 위해 모험을 떠난다.
+                        파랑돌 행성에 불시착한 뽀로로와 친구들 앞에 나타난
+                        열정 가득한 매니저 ‘스캣’의 도움으로
+                        ‘뽀로로 밴드’는 가까스로 설레는 예선 무대에 오른다.
+                        한편, 악당 ‘빅벤’은 ‘스캣’과의 경쟁에서 이기기 위해
+                        모든 것이 완벽한 AI 아이돌 ‘아이원’을 앞세워 대회에 참가하지만
+                        ‘뽀로로 밴드’의 예상치 못한 인기에 위기감을 느껴 급기야 방해 공작을 벌이게 되고,
+                        뽀로로와 친구들은 마지막 공연을 앞두고 갑작스러운 위기를 맞이하는데…
+                        12월, 우승보다 노는 게 제일 좋은 뽀로로 밴드의 아주 특별한 모험이 시작된다!</p>
+                    <img src="expectedMovie/exmovie_chart9-1.jpg" alt="" onmouseover="movie_info(18)" onmouseout="movie_info_close(18)"
+                        >
+                    
+                    <br>
+                    <button id="score" value="score">평점</button>
+                    <button id="ticketing" value="ticketing">예매</button>
+                </div>
+                <div>
+                    <p class="movie_info">게임을 시작하시겠습니까?
+                        슬럼프에 빠진 ‘순한맛’ 게임 크리에이터 ‘도티’에게
+                        자극적인 ‘매운맛’으로 승승장구하고 있는 인기 1위 크리에이터 킬박이 게임 대결을 신청한다.
+                        서로의 은퇴를 건 중대한 대결을 위해 도티의 든든한 지원군이자 친구들인 ‘도티즈’ 옐언니, 밍모, 코아가 함께 한다.
+                        박진감 넘치는 게임 승부 도중, 의문의 AI 캐릭터 파파라쿤에 의해
+                        ‘도티즈’와 킬박, 생방송 게임 시청자들이 ‘영원의 탑’이라는 게임으로 강제 소환되는데!
+                        게임 속 상황이 현실이 되어버리는 절체절명의 위기 속,
+                        도티와 친구들은 ‘영원의 탑’ 게임에 얽힌 비밀을 풀고 모두를 구할 수 있을까?
+                        현실 세계의 영혼이 게임에 봉인됐다!
+                        위기에 빠진 친구들을 구하기 위한 놀라운 게임 어드벤처가 시작된다!</p>
+                    <img src="expectedMovie/exmovie_chart10-1.jpg" alt="" onmouseover="movie_info(19)" onmouseout="movie_info_close(19)">
+                    
                     <br>
                     <button id="score" value="score">평점</button>
                     <button id="ticketing" value="ticketing">예매</button>

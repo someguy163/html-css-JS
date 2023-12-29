@@ -1,0 +1,105 @@
+body {
+    background-color: rgba(50, 48, 52, 0.939);
+}
+
+#container {
+    width: 1400px;
+    height: 1850px;
+    margin: 0px auto;
+    /* background-color: rgba(50, 48, 52, 0.939); */
+}
+
+/* 헤더 시작 */
+
+header {
+    width: 100%;
+    height: 100px;
+    /* margin-top: 30px; */
+    background-color: rgba(50, 48, 52, 0.939);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    line-height: 100px;
+}
+
+header div {
+    margin: 0px auto;
+
+}
+
+header div a {
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 15px;
+    color: white;
+}
+
+.headerimg {
+    /* margin-top: 0px; */
+    padding: 5px;
+}
+
+/* 헤더 끝 */
+/* 배너 (article) */
+article {
+    width: 100%;
+    height: 210px;
+    /* border: 1px solid black; */
+    /* background-color: rgba(50, 48, 52, 0.939); */
+}
+
+/* 배너 (article) 끝 */
+
+
+
+/* ********************************************* */
+/* 푸터시작 */
+footer {
+    background-color: rgba(50, 48, 52, 0.939);
+    width: 100%;
+    height: 200px;
+}
+
+footer div {
+    padding: 5px;
+}
+
+footer #footertop {
+    margin-left: 30px;
+    font-size: x-small;
+}
+
+footer #footertop div {
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+footer #footertop div a {
+    text-decoration: none;
+    color: white;
+}
+
+footer #footerbottom {
+    margin-left: 30px;
+}
+
+footer #footerbottom div {
+    display: inline-block;
+    color: white;
+    margin-left: 40px;
+    margin-top: 30px;
+    font-size: x-small;
+}
+
+footer #footerbottom div img {
+    margin-left: 10px;
+}
+
+#footerinfo {
+    margin-left: 100px;
+}
+
+/* 푸터 끝 */
