@@ -23,9 +23,10 @@ header {
     line-height: 100px;
 }
 
+
 header div {
     margin: 0px auto;
-
+display: flex;
 }
 
 header div a {

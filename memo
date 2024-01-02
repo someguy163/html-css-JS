@@ -224,3 +224,20 @@ vsCode 단축키
 10.     document.querySelector('#result').innerText = calDate;
         스크립트에서 작성한 결과값을 다음과 같이 작성하면 
         <p><span class="accent" id="result"></span> 안에 넣을수 있다. 
+
+11.     getElementById("id명");
+        한개만 적용가능
+        getElementByClassName("class명");
+        두개이상 적용가능
+        getElementByTagName("태그명");        
+        ex ) h1 태그등 태그를 통해서 적용가능하다
+
+        querySelector(선택자) 한개의 값만반환 한다
+        querySelectorAll(선택자) 그 선택자 모두를 노드 리스트로 전환한다
+
+                function displaySrc(){
+            var cup = document.querySelector("#cup");
+            alert("이미지 소스" + cup.getAttribute("alt"));
+        }
+
+        id : cup을 가져오고 alret창에 cup의 변수에 대한 alt , src 등 속성값을 출력한다.
