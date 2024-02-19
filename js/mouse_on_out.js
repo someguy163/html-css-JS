@@ -31,4 +31,5 @@ function movie_info(n) {
 function movie_info_close(n) {
     let show_close = document.querySelectorAll('.movie_info');
     show_close[n].style.display = 'none';
+    
 }
